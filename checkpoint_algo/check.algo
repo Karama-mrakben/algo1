@@ -1,0 +1,44 @@
+ALGORITHM algorithm_check
+VAR
+a:STRING;
+b:STRING=['a','e','i','o',u','y'];
+n:INTEGER:=1;
+n_voy:INTEGER:=0;
+i,j:INTEGER;
+BEGIN
+REPEAT
+    write('donner une phrase complete',a)
+    read(a)
+UNTIL (a[STRING.length(a)-1]='.')
+
+FOR i FROM 0 TO STRING.length(a)-1 STEP 1  DO
+IF (a[i]='') THEN
+n:=n+1;
+END_IF 
+END_FOR
+
+FOR i FROM 0 TO STRING.length(a)-1 STEP 1  DO
+FOR j FROM 0 TO STRING.length(v)-1 STEP 1 DO
+IF (lowercase(a[i])==b[j]) THEN
+n_voy:=n_voy+1;
+END_IF 
+END_FOR
+END_FOR
+write("the length of the sentence is", STRING.length(a));
+write("the number of words in the sentence is",n);
+write("the number of the voyel in the sentence is",n_voy);
+END 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
